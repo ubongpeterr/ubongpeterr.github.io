@@ -1,0 +1,378 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'poppins', sans-serif;
+    box-sizing: border-box;
+}
+body{
+    background: #040a11;
+    color: #fff;
+       font-family: 'poppins', sans-serif;
+}
+html{
+    scroll-behavior: smooth;
+}
+#header{
+    width: 100%;
+    height: 100vh;
+    background-image: url(images/background.png);
+    background-size: cover;
+    background-position: center;
+}
+.container{
+    padding: 3% 16%;
+    text-align: center;
+}
+.section {
+    text-align: left; /* Ensures text is left-aligned */
+    margin: 10px 0; /* Adds spacing above and below */
+    padding: 10px;
+  }
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.logo{
+    width: 65px;
+}
+
+
+nav ul li {
+    display: inline-block;
+    list-style: none;
+    margin: 5px 10px;
+ }
+ nav ul li a {
+     color: #fff;
+     text-decoration: none;
+     font-size: 15px;
+     position: relative;
+ }
+ a{
+    text-decoration: none;
+    color: black;
+    padding:5px;
+ 
+ }
+
+ .row{
+    display: block;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 15px;
+}
+.about-col-12{
+    flex-basis: 100%;
+    }
+    .about-col-12 img{
+    width: 100%;
+    border-radius: 15px;
+    }
+    .btn{
+        background-color: #ffbf00;
+        width: 130px;
+        text-align: center;
+        height: 30px;
+        border-radius: 5px;
+        font-weight: 500;
+        
+    }
+    .btn-t{
+        background: transparent;
+        color: #fff;
+        border: 1px solid #fff;
+        border-radius: 10px;
+      
+     
+        display: inline-block; /* Ensures proper spacing */
+        padding: 10px 20px;
+       
+        text-decoration: none;   
+    }
+    .fa-times {
+        display: none;
+    }
+    .fa-bars{
+        display: none;
+    }
+    .bg{
+        background-color: #3d2f0f;
+        padding: 30px;
+        border-radius: 10px;
+        font-size: 18px;
+        line-height: 30px;
+        font-family: poppins;
+        margin-top: 30px;
+    }
+    h1 {
+    font-size: 50px;
+            display: inline-block; /* Ensures h1 is inline-block for custom line width */
+            padding-bottom: 1px; /* Space between text and dotted line */
+            text-align: left; 
+           
+    }
+    h1::after {
+        content: ''; /* Creates an empty pseudo-element */
+        display: block;
+        width: 100%; /* Set width of the dotted line (adjust as needed) */
+        border-bottom: 7px dotted #fff; /* Dotted line style */
+       margin: 0;
+    }
+
+    h2{
+        margin-top: 20px;
+        font-size: 49px;
+    }
+    h6{
+        margin-top: 10px;
+        font-size: 20px;
+        margin-bottom: 20px;
+        font-weight: 300;
+        color: #fff;
+    }
+    h5{
+        font-size: 18px;
+        margin-bottom: 20px;
+        font-weight: 500;
+        color: #fff;
+        margin-top: 20px;
+    }
+
+    .social-container {
+        display: flex;
+        justify-content: center; /* Centers icons horizontally */
+        gap: 15px; /* Space between icons */
+        margin-top: 20px;
+      }
+      
+      .social-btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 50px; 
+        height: 50px; 
+        border: 2px solid rgba(255, 255, 255, 0.5); /* Transparent border */
+        border-radius: 8px; /* Removes rounded corners */
+        text-decoration: none;
+        font-size: 24px;
+        color: white;
+        background: transparent; /* Transparent background */
+        transition: all 0.3s ease-in-out;
+      }
+      
+      .social-btn:hover {
+        background: rgba(255, 255, 255, 0.2); /* Slightly visible on hover */
+      }
+      
+      /* Mobile styles (up to 768px) */
+@media (max-width: 768px) {
+    nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 15px;
+    }
+
+    nav ul {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 70%;
+        height: 100%;
+        background: #040a11;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        transition: right 0.3s ease-in-out;
+    }
+    .bg{
+        line-height: 20px;
+    }
+
+    nav ul.show {
+        right: 0; /* Slide in menu when open */
+    }
+
+    nav ul li {
+        margin: 15px 0;
+        list-style: none;
+    }
+
+    nav ul li a {
+        font-size: 18px;
+        color: #fff;
+        text-decoration: none;
+    }
+
+    /* Show menu toggle icons */
+    .fa-bars, .fa-times {
+        display: block;
+        font-size: 24px;
+        cursor: pointer;
+        color: white;
+    }
+
+    /* Ensure close icon is hidden by default */
+    .fa-times {
+        display: none;
+    }
+
+    .container {
+        padding: 2% 3.5%; /* Reduced from 3% 16% */
+        text-align: center;
+    }
+
+    h1 {
+        font-size: 9vw;
+    }
+    h2 {
+        font-size: 6vw;
+    }
+    h6, h5, p{
+        font-size: 4.6vw;
+    }
+
+}
+
+.text{
+    font-size: 28px;
+    color: gray;
+    font-weight: 600;
+}
+
+
+
+/* Container to manage spacing */
+.input-container {
+    width: 100%;
+    max-width: 600px; /* Adjust max-width as needed */
+    margin: 20px auto; /* Centers the input */
+    display: flex;
+    flex-direction: column;
+}
+
+/* Label styling */
+.input-container label {
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 5px;
+    color: #fff;
+    text-align: left;
+    font-family: 'poppins', sans-serif;
+}
+
+/* Full-width input */
+.input-container input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    background-color: transparent;
+    border-radius: 5px;
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.3s ease;
+    font-family: 'poppins', sans-serif;
+
+}
+.full-width-btn {
+    width: 65%;
+    padding: 12px;
+    margin-top: 10px; /* Space between input and button */
+    background-color: #ffbf00; /* Button color */
+    color: black;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+/* Input focus effect */
+.input-container input:focus {
+    border-color: #fff;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .input-container {
+        width: 90%;
+    }
+}
+
+
+
+.containerw {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    max-width: 1000px;
+}
+
+.card {
+    background: transparent;
+    border: 2px solid rgb(24, 23, 23); /* Blue border */
+    border-radius: 10px;
+    overflow: hidden;
+    text-align: center;
+    width: 100%;
+    max-width: 320px;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 15px;
+}
+
+.card img {
+    width: 100%;
+    height: 250px; /* Ensures a good image fit */
+    object-fit: cover;
+    
+}
+
+.card h2 {
+    font-size: 20px;
+    margin: 15px 0 10px;
+}
+
+.card p {
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 20px;
+    padding: 0 15px;
+}
+
+.card  a {
+    background: #007bff;
+    color: white;
+    border: none;
+    
+    border-radius: 5px;
+    cursor: pointer;
+    align-self: center;
+}
+
+.btnv{
+    background-color: #ffbf00;
+    width: 130px;
+    text-align: center;
+    height: 30px;
+    border-radius: 5px;
+    font-weight: 500;
+    
+}
+
+/* Responsive */
+@media (min-width: 768px) {
+    .containerw {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .card {
+        width: 30%; /* Ensures three cards fit in a row */
+    }
+}
